@@ -7,8 +7,8 @@ const routes: Routes = [
     path: '',
     component: LayoutPageComponent,
     children:[
-      { path: 'empresas', loadChildren: () => import('../tep-app/empresas/empresas.module').then( (m) => m.EmpresasModule)},
-      { path: 'empleados', loadChildren: () => import('../tep-app/empleados/empleados.module').then( (m) => m.EmpleadosModule)}
+      { path: 'empresas', loadChildren: () => import('../tep-app/empresas/empresas.module').then( m => m.EmpresasModule)},
+      { path: 'empleados', loadChildren: () => import('../tep-app/empleados/empleados.module').then( m => m.EmpleadosModule)}
     ]
   }
 ];

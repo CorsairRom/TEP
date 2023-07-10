@@ -5,8 +5,7 @@ import { LayoutPageComponent } from './tep-app/pages/layout-page/layout-page.com
 const routes: Routes = [
   {
     path: '',
-    component: LayoutPageComponent,
-
+    loadChildren: () => import('../app/tep-app/tep-app.module').then(m => m.TepAppModule)
   }
 ];
 
