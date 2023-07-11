@@ -5,6 +5,7 @@ import { EmpleadosRoutingModule } from './empleados-routing.module';
 import { AddEmpleadoComponent } from './pages/add-empleado/add-empleado.component';
 import { ListaEmpleadosComponent } from './pages/lista-empleados/lista-empleados.component';
 import { MaterialModule } from 'src/app/material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MaterialModule } from 'src/app/material/material.module';
   imports: [
     CommonModule,
     EmpleadosRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class EmpleadosModule { }

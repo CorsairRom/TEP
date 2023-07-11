@@ -16,4 +16,8 @@ export class EmpresasServices {
     return this.http.get<Empresas[]>( `${this.baseUrl}/api/empresas` )
   }
 
+  addEmpresa(empresa:Empresas):Observable<Empresas> {
+    return this.http.post<Empresas>(`${this.baseUrl}/api/empresas/`, empresa)
+  }
+
 }

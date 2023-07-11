@@ -16,6 +16,9 @@ export class EmpleadosServices {
     return this.http.get<Empleados[]>( `${this.baseUrl}/api/empleados` )
   }
 
+  addEmpleados(empleado:Empleados):Observable<Empleados[]> {
+    return this.http.post<Empleados[]>(`${this.baseUrl}/api/empleados/`, empleado)
+  }
 
 
 
