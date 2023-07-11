@@ -1,11 +1,18 @@
 
-<mat-card class="mb-2">
-  <mat-card-content class="flex">
-    <div class="nav-label text-center p-2">
+<mat-card class="mb-2 ">
+  <mat-card-content class="flex justify-content-between">
+    <div class="nav-label p-2 flex align-content-center texto">
       Empleados
     </div>
-    <span class="spacer"></span>
-    <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon" (click)="navigate()">
+    <mat-form-field class="flex input" >
+      <input type="text" matInput (keyup)="filtrar($event)" placeholder="Buscar...">
+    </mat-form-field>
+    <button
+      mat-mini-fab
+      color="warn"
+      aria-label="Botton example"
+      class="texto"
+      (click)="navigate()">
       <mat-icon>add</mat-icon>
     </button>
   </mat-card-content>
