@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path: 'registro',
     component: AddEmpleadoComponent
-  }
+  },
+  {path: '**', redirectTo: '/'},
 ];
 
 @NgModule({

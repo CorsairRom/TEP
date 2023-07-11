@@ -6,7 +6,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('../app/tep-app/tep-app.module').then(m => m.TepAppModule)
-  }
+  },
+  {path: '**', redirectTo: '/'},
 ];
 
 @NgModule({

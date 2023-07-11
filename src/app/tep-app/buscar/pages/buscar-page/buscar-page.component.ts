@@ -15,6 +15,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class BuscarPageComponent implements OnInit {
 
   public empresasRut:string[] =[]
+  public empresasNombre:string[] =[]
   public selectedEmpresa: boolean = false;
   public empleados:Empleados[] = [];
   public displayedColumns: string[] = ['id', 'Nombre', 'Rut', 'Email', 'Empresa', 'Acciones'];
@@ -29,7 +30,7 @@ export class BuscarPageComponent implements OnInit {
     this.empresasService.getEmpresas().pipe(
       switchMap(empresas => {
         // Obtener los ruts de las empresas
-        const ruts = empresas.map(empresa => empresa.rut_empresa);
+        const ruts = empresas.map<string>(empresa => empresa.rut_empresa);
         // Asignar los ruts a la variable empresasRut
         this.empresasRut = ruts;
         return empresas;
