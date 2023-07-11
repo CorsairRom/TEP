@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { EmpleadosRoutingModule } from './empleados-routing.module';
-import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
-import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
+import { AddEmpleadoComponent } from './pages/add-empleado/add-empleado.component';
+import { ListaEmpleadosComponent } from './pages/lista-empleados/lista-empleados.component';
 
 
 @NgModule({
