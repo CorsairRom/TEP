@@ -1,0 +1,74 @@
+
+
+<div class="grid d-flex justify-content-center align-items-center p-4">
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-title class="text-center p-3">Registro Empresa</mat-card-title>
+      <mat-card-content>
+        <form class="grid" [formGroup]="empresasForm" (ngSubmit)="onSubmit()">
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="nombre_empresa"
+              >
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Rut</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="rut_empresa"
+              >
+          </mat-form-field>
+
+
+
+          <mat-form-field class="col-12">
+            <mat-label>Dirección</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="direccion_empresa"
+              >
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Teléfono</mat-label>
+            <input
+              matInput
+              type="number"
+              required
+              formControlName="telefono"
+              >
+          </mat-form-field>
+
+
+        </form>
+
+        <div class="flex justify-content-between">
+
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="onSubmit()"
+          >
+          <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
