@@ -1,3 +1,3 @@
 export const environments = {
-  baseUrl: 'http://localhost:4200' //cambiar por url del despliegue
+  baseUrl: 'http://127.0.0.1:8000' //cambiar por url del despliegue
 }
