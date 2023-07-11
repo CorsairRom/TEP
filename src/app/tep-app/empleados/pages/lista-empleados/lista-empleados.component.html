@@ -1,4 +1,16 @@
 
+<mat-card class="mb-2">
+  <mat-card-content class="flex">
+    <div class="nav-label text-center p-2">
+      Empleados
+    </div>
+    <span class="spacer"></span>
+    <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon" (click)="navigate()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-content>
+</mat-card>
+
 <table mat-table [dataSource]="empleados" class="mat-elevation-z8">
 
   <ng-container matColumnDef="id">
