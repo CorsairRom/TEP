@@ -6,13 +6,13 @@ import { Empresas } from '../interfaces/empresas.interface';
 
 @Injectable({ providedIn: 'root' })
 
-export class ServiceNameService {
+export class EmpresasServices {
 
   private baseUrl:string = environments.baseUrl;
 
   constructor(private http: HttpClient) { }
 
-  getEmpleados():Observable<Empresas[]> {
+  getEmpresas():Observable<Empresas[]> {
     return this.http.get<Empresas[]>( `${this.baseUrl}/api/empresas` )
   }
 

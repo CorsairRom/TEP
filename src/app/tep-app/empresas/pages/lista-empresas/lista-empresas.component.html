@@ -1,1 +1,36 @@
-<p>lista-empresas works!</p>
+
+<table mat-table [dataSource]="empresas" class="mat-elevation-z8">
+
+   <!-- Rut Column -->
+  <ng-container matColumnDef="Rut">
+    <th mat-header-cell *matHeaderCellDef> Rut </th>
+    <td mat-cell *matCellDef="let empresas"> {{empresas.rut_empresa}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Nombre">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let empresas"> {{empresas.nombre_empresa}} </td>
+  </ng-container>
+
+  <!-- Direccion Column -->
+  <ng-container matColumnDef="Direccion">
+    <th mat-header-cell *matHeaderCellDef> Dirección</th>
+    <td mat-cell *matCellDef="let empresas"> {{empresas.direccion_empresa}} </td>
+  </ng-container>
+
+  <!-- Telefono Column -->
+  <ng-container matColumnDef="Telefono">
+    <th mat-header-cell *matHeaderCellDef> Telefono </th>
+    <td mat-cell *matCellDef="let empresas"> {{empresas.telefono}} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="Acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let empresas"> <mat-icon>search</mat-icon> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -15,7 +15,7 @@ export class ListaEmpleadosComponent implements OnInit {
   public empleados:Empleados[] = [];
 
 
-  constructor( private empleadosServices: EmpleadosServices){}
+  constructor( private empleadosServices: EmpleadosServices ){}
 
   ngOnInit(): void {
     this.empleadosServices.getEmpleados()
