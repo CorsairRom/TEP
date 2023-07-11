@@ -5,7 +5,7 @@
       Empleados
     </div>
     <mat-form-field class="flex input" >
-      <input type="text" matInput (keyup)="filtrar($event)" placeholder="Buscar...">
+      <input  matInput (keyup)="filtrar($event)" autocomplete="off" placeholder="Buscar...">
     </mat-form-field>
     <button
       mat-mini-fab
@@ -18,7 +18,7 @@
   </mat-card-content>
 </mat-card>
 
-<table mat-table [dataSource]="empleados" class="mat-elevation-z8">
+<table mat-table [dataSource]="empleados" matTableFilter class="mat-elevation-z8">
 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> id </th>
