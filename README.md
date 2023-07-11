@@ -6,6 +6,8 @@ El servicio principal de esta aplicacion es la gestion de empresas y sus emplead
 
 ## Instalacion
 
+Previamente es necesario tener instalado y configurado el backend que se encuentra en el repositorio:
+[tepapi](https://github.com/CorsairRom/TepApi.git)
 Clone el repositorio, navegue hasta la ruta e instale las dependencias necesarios. `npm install`
 
 ## Server
@@ -16,6 +18,5 @@ Este proyecto tambien de encuentra corriendo en un s3 bucket en la direccion:
 
 [tepapiv2](http://tepapiv2.s3-website.us-east-2.amazonaws.com)
 
-## Code scaffolding
 
 
