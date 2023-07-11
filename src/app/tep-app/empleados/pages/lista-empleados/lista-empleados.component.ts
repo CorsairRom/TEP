@@ -26,7 +26,7 @@ export class ListaEmpleadosComponent implements OnInit {
 
   public empleados:Empleados[] = [];
   public displayedColumns: string[] = ['id', 'Nombre', 'Rut', 'Email', 'Empresa', 'Acciones'];
-  public dataSource!:MatTableDataSource<any>;
+  public dataSource = new MatTableDataSource(this.empleados);
 
   constructor(
     private empleadosServices: EmpleadosServices,
@@ -38,8 +38,6 @@ export class ListaEmpleadosComponent implements OnInit {
     this.empleadosServices.getEmpleados()
     .subscribe(empleados => {
       this.empleados = empleados
-      console.log(empleados);
-      this.dataSource = new MatTableDataSource(empleados);
     });
   }
 
@@ -49,16 +47,14 @@ export class ListaEmpleadosComponent implements OnInit {
 
   filtrar(event: Event) {
     const filtro = (event.target as HTMLInputElement).value;
-    console.log(filtro);
 
-
-    this.dataSource.filter = filtro;
+    this.dataSource.filter = filtro.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
     this.table.renderRows();
-  }
+  };
 
 
 }
